@@ -16,7 +16,7 @@ def opc1():
     for x in trabajadores:
         aleatorio = random.randint(300000,2500000)
         print(f"\nTRABAJADOR: {x}")
-        print(f"SUELDO: : ${aleatorio} Pesos")
+        print(f"SUELDO: ${aleatorio} Pesos")
         time.sleep(1)
         sueldos.append(aleatorio)
     time.sleep(2)
@@ -128,16 +128,13 @@ def opc4():
         with open("suelods.csv","w", newline="") as archivo:
             escritor = csv.writer(archivo)
             datos = ['Nombre', 'Sueldo Base', 'Dscto AFP', 'Dscto Salud']
+            
+            
             escritor.writerows(datos)
             print("ARCHIVO CSV EXPORTADO!")
             time.sleep(2)
             
         
-            
-
-
-
-
 
 def opc5():
     
