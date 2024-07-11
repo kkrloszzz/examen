@@ -59,7 +59,8 @@ def opc2():
         time.sleep(2)
         total = sum(sueldos)
         print(f"\nTOTAL DE LOS SUELDOS: ${total} Pesos")
-        time.sleep(2)
+        time.sleep(3)
+        os.system('cls')
 
 
 
@@ -122,9 +123,15 @@ def opc4():
         for x in sueldos:
             afp = x * 0.88
             sueldos_dscto_afp.append(afp)
-        for x in sueldos:
-            sueldo_li = x -sueldos_dscto_salud[x] - sueldos_dscto_afp[x]
-            print("OK")
+        
+
+        with open("suelods.csv","w", newline="") as archivo:
+            escritor = csv.writer(archivo)
+            datos = ['Nombre', 'Sueldo Base', 'Dscto AFP', 'Dscto Salud']
+            escritor.writerows(datos)
+            print("ARCHIVO CSV EXPORTADO!")
+            time.sleep(2)
+            
         
             
 
@@ -143,6 +150,7 @@ def opc5():
     os.system('cls')
     print("Finalizando Programa...")
     time.sleep(1)
-    print("Desarrollado Por: Carlos Domke")
+    print("Desarrollado Por Carlos Domke")
     time.sleep(1)
     print("RUT: 21.977.468-0")
+    time.sleep(1)

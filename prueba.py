@@ -19,8 +19,6 @@ while True:
         print("3. Ver estadísticas")
         print("4. Reporte de sueldos")
         print("5. Salir del programa")
-    
-    
         try:
             opc = int(input("\nMI ELECCIÓN ES: "))
             if opc in (1,2,3,4,5):
